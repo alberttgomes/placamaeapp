@@ -1,43 +1,42 @@
-import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View, Image } from 'react-native';
-import { NativeBaseProvider, Box,Text, ScrollView, Stack, Heading } from 'native-base';
-import { NavigationContainer } from '@react-navigation/native';
-import { useEffect } from 'react';
+import { NativeBaseProvider, Box,Text, Heading } from 'native-base';
 
 
 export default function Acoes({navigation}) {
-
       return (
-      <NativeBaseProvider>
-        <View style={styles.container}>
-          <Image 
-          style={styles.image}
-          source={require('../assets/logo.png')}
-          />
-          <Text></Text>
-          <Box style={styles.inicio}>
-            <Heading color="white">Nossas Ações </Heading>
-              <Text style={styles.text}>
-              A PlacaMãe.Org_ desenvolve atividades, em escolas públicas e privadas, da região metropolitana 
-              do Recife. Levamos para crianças e adolescentes a temática : </Text>
-              <Text style={styles.text}>Internet: contexto, limites e responsabilidades, esse assunto nos 
-              direciona a uma conversa sobre 
-              Cyberbullying. </Text> 
-            <Image 
-              style={styles.imagebox}
-              source={require('../assets/ft0.png')}
-            />
-            <Image 
-              style={styles.imagebox}
-              source={require('../assets/ft1.jpeg')}
-            />
-          </Box>
-        </View>
-      </NativeBaseProvider>
+          <NativeBaseProvider>
+            <View style={styles.container}>
+              <Image 
+              style={styles.image}
+              source={require('../assets/logo.png')}
+              />
+              <Text></Text>
+              <Box style={styles.inicio}>
+                <Heading color="white">Nossas Ações </Heading>
+                  <Text style={styles.text}>
+                    A PlacaMãe.Org_ desenvolve atividades, em escolas públicas e privadas, da região metropolitana 
+                    do Recife. Levamos para crianças e adolescentes a temática: 
+                  </Text>
+                  <Text style={styles.text}>
+                    Internet: contexto, limites e responsabilidades, esse assunto nos 
+                    direciona a uma conversa sobre 
+                    Cyberbullying. 
+                  </Text> 
+                  <Image 
+                    style={styles.imagebox}
+                    source={require('../assets/ft0.png')}
+                  />
+                  <Image 
+                    style={styles.imagebox}
+                    source={require('../assets/ft1.jpeg')}
+                  />
+              </Box>
+            </View>
+          </NativeBaseProvider>
     );
-  }
+}
   
-  const styles = StyleSheet.create({
+const styles = StyleSheet.create({
     container: {
       flex: 1,
       alignItems: 'center',
@@ -53,7 +52,7 @@ export default function Acoes({navigation}) {
     },
    
     text: {
-      color: 'white',
+      color: '#FFF',
       width: 305,
       height: 85,
       margin: 8,
@@ -69,4 +68,4 @@ export default function Acoes({navigation}) {
       borderColor: '#F8F8FF',
 
     }
-  });
+});

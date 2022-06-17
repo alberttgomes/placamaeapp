@@ -1,40 +1,46 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View, Image } from 'react-native';
-import { NativeBaseProvider, Box, Button, Text, ScrollView, Stack, Input, FormControl, Heading } from 'native-base';
-import { NavigationContainer } from '@react-navigation/native';
-import { useEffect } from 'react';
+import { NativeBaseProvider, Box, Button, Text, Heading } from 'native-base';
+
 
 export default function Home({navigation}) {
 
   const Botao = () => {
-    return <Box alignItems="center">
+    return(
+      <Box alignItems="center">
         <Button
          style={styles.botao}
-         onPress={() => console.log("hello world")}>Denuncie</Button>
-      </Box>;
+         onPress={() => console.log("hello world")}
+        >
+          Denuncie
+        </Button>
+      </Box>
+    ) 
   };
 
   return (
     <NativeBaseProvider>
-    <View style={styles.container}>
-    <Image 
-    style={styles.image}
-    source={require('../assets/logo.png')}
-    />
-    <Box style={styles.inicio}>
-    <Heading color="white">Cyberbullyling</Heading>
-    <Text style={styles.text}>Cyberbullying é o bullying realizado por meio das tecnologias digitais. 
-      Pode ocorrer nas mídias sociais, plataformas de mensagens, plataformas de jogos 
-      e celulares. É o comportamento repetido, com intuito de assustar, enfurecer ou 
-      envergonhar aqueles que são vítimas.</Text>
-      <Image 
-      style={styles.imagebox}
-      source={require('../assets/foto.jpg')}
-      />
-      </Box>
-      <Botao></Botao>
-      <StatusBar style="auto" />
-    </View>
+      <View style={styles.container}>
+        <Image 
+          style={styles.image}
+          source={require('../assets/logo.png')}
+        />
+        <Box style={styles.inicio}>
+          <Heading color="white">Cyberbullyling</Heading>
+          <Text style={styles.text}>
+            Cyberbullying é o bullying realizado por meio das tecnologias digitais. 
+            Pode ocorrer nas mídias sociais, plataformas de mensagens, plataformas de jogos 
+            e celulares. É o comportamento repetido, com intuito de assustar, enfurecer ou 
+            envergonhar aqueles que são vítimas.
+          </Text>
+          <Image 
+          style={styles.imagebox}
+          source={require('../assets/foto.jpg')}
+          />
+        </Box>
+        <Botao></Botao>
+        <StatusBar style="auto" />
+      </View>
     </NativeBaseProvider>
   );
 }
@@ -59,7 +65,7 @@ const styles = StyleSheet.create({
     height: 40,
   },
   text: {
-    color: 'white',
+    color: '#FFF',
     width: 305,
     height: 85,
     margin: 8,

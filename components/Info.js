@@ -1,8 +1,5 @@
-import { StatusBar } from 'expo-status-bar';
 import {  Linking} from 'react-native';
 import { Box, Button, Text, Center, Skeleton, Image, VStack} from 'native-base';
-
-
 
 const Info = ({text, url, image}) => {
    
@@ -29,4 +26,4 @@ const Info = ({text, url, image}) => {
       </Center>;
   };
 
-  export default Info
+  export default Info;
